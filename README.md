@@ -1,6 +1,6 @@
 # Cat &amp; dog binary classification with PyTorch
 
-### Accuracy on never seen test set is 98.2667%
+### Accuracy on test set: 98.2667%
 <br>
 Used dataset: https://www.kaggle.com/datasets/shaunthesheep/microsoft-catsvsdogs-dataset
 <br>
