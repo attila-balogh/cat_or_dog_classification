@@ -30,6 +30,8 @@ def evaluate_model(network, dataset, device=train.get_device()):
             preds = network(images)
             predictions.extend((preds.argmax(dim=1)).tolist())
             test_correct += get_num_correct(preds, labels)
+    
+    test_acc = 100 * test_correct / test_dataset_size
 
     print()
     print(f"Test set accuracy:\t{100 * test_correct / len(dataset)}%")
@@ -47,3 +49,5 @@ def evaluate_model(network, dataset, device=train.get_device()):
     f.set_ylabel('True', size=24)
 
     f.set_title("Confusion Matrix", size=32)
+
+    return test_acc
