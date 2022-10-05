@@ -8,6 +8,8 @@ Used dataset: https://www.kaggle.com/datasets/shaunthesheep/microsoft-catsvsdogs
 Time of training (with validation phases) 4.0h 15.0m 25s.
 <br>
 <br>
+
+
 <img src= "utils/plot_acc.png" width=600 height=450>
 <br>
 <img src= "utils/plot_loss.png" width=600 height=450>
@@ -16,6 +18,22 @@ Time of training (with validation phases) 4.0h 15.0m 25s.
 <br>
 <img src= "utils/plot_cm.png">
 <br>
+<br>
+
+
+Total parameters:   19,913,346<br>
+Total trainable parameters:   19,913,346<br>
+<br>
+Training dataset size: 		17,998<br>
+Validation dataset size: 	4,000<br>
+Test dataset size: 		3,000<br>
+<br>
+Input image size: 256 × 256<br>
+<br>
+Batch size:    	 32<br>
+Learning rate: 	 0.0005<br>
+Loss function: 	 cross_entropy<br>
+No. epochs:    	 50<br>
 <br>
 
 
