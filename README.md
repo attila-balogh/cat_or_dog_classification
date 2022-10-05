@@ -9,7 +9,9 @@ Time of training (with validation phases) 4.0h 15.0m 25s.
 <br>
 <br>
 
-
+<br>
+<img src= "utils/architecture.png">
+<br>
 <img src= "utils/plot_acc.png" width=600 height=450>
 <br>
 <img src= "utils/plot_loss.png" width=600 height=450>
