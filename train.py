@@ -11,7 +11,7 @@ from torch.utils.data import DataLoader
 import time
 
 import evaluate
-from models.model3 import Model3
+from models.smallCNN import SmallCNN
 
 from datasets.data import train_ds, val_ds, test_ds
 from datasets.data import image_size
@@ -97,22 +97,18 @@ val_dataset_size = len(val_ds)
 test_dataset_size = len(test_ds)
 
 
-"""
-HYPERPARAMETERS
-"""
+# HYPERPARAMETERS
 
-network = Model3(image_size=image_size)
+network = SmallCNN(image_size=image_size)
 
 batch_size = 32
 loss_fn = F.cross_entropy
 learning_rate = 0.00005
-num_epoch = 20
+num_epoch = 50
 
 network.to(device)
 
-
-print()
-print()
+# Printing out network properties
 print()
 print(network)
 print()
@@ -142,9 +138,8 @@ lr_scheduler = optim.lr_scheduler.OneCycleLR(optimizer, learning_rate, epochs=nu
                                              steps_per_epoch=len(train_loader))
 
 
-"""
-BEFORE TRAINING METRICS
-"""
+
+# BEFORE TRAINING METRICS
 
 total_loss = 0
 total_correct = 0
@@ -195,9 +190,8 @@ before_train_loss = (total_loss / train_dataset_size)
 before_val_loss = (total_val_loss / val_dataset_size)
 
 
-"""
-TRAINING
-"""
+
+# TRAINING
 
 history_train_loss = []
 history_train_acc = []
@@ -294,11 +288,10 @@ passed_secs = int(passed)
 
 print(f"TIME of training (with validation phases) {passed_hrs}h {passed_mins}m {passed_secs}s.")
 
-"""
-END OF TRAINING
-"""
+
+
 
 evaluate.evaluate_model(network, device)
 
-save_path = f"../catordog/models/model3_{history_val_acc[-1]:.2f}"
+save_path = f"../catordog/models/SmallCNN_{history_val_acc[-1]:.2f}"
 save_model(network, save_path)
