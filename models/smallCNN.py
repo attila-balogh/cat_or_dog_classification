@@ -8,7 +8,7 @@ import torch.nn.functional as F
 from models.ResidualBlock import ResidualBlock
 
 
-class Model3(nn.Module):
+class SmallCNN(nn.Module):
     def __init__(self, image_size):
         super().__init__()
         self.conv1 = nn.Conv2d(in_channels=3, out_channels=32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
