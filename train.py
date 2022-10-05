@@ -293,5 +293,5 @@ print(f"TIME of training (with validation phases) {passed_hrs}h {passed_mins}m {
 
 evaluate.evaluate_model(network, device)
 
-save_path = f"../catordog/models/SmallCNN_{history_val_acc[-1]:.2f}"
+save_path = f"../catordog/models/SmallCNN_{history_val_acc[-1]:.2f}.pth"
 save_model(network, save_path)
