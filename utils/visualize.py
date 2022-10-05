@@ -41,31 +41,37 @@ def show_samples(dataset=datasets.data.train_dataset):
 
 def plot_accuracy(train, val):
     plt.figure(figsize=(12,8))
-    plt.plot(val)
-    plt.plot(train)
-    plt.ylabel('Accuracy (%)')
-    plt.xlabel('No. epochs')
-    plt.title('Accuracy through epochs')
-    plt.legend(["Validation", "Training"])
+    plt.plot(history_val_acc)
+    plt.plot(history_train_acc)
+    plt.ylabel('Accuracy (%)', fontsize=18)
+    plt.xlabel('No. epochs', fontsize=18)
+    plt.title('Accuracy through epochs', fontsize=20)
+    plt.legend(["Validation", "Training"], fontsize=16)
+    plt.xticks(fontsize=14)
+    plt.yticks(fontsize=14)
     plt.show()
 
 
 def plot_loss(train, val):
     plt.figure(figsize=(12,8))
-    plt.plot(val)
-    plt.plot(train)
-    plt.ylabel('Loss')
-    plt.xlabel('No. epochs')
-    plt.title('Loss through epochs')
-    plt.legend(["Validation", "Training"])
+    plt.plot(history_val_loss)
+    plt.plot(history_train_loss)
+    plt.ylabel('Loss', fontsize=18)
+    plt.xlabel('No. epochs', fontsize=18)
+    plt.title('Loss through epochs', fontsize=20)
+    plt.legend(["Validation", "Training"], fontsize=16)
+    plt.xticks(fontsize=14)
+    plt.yticks(fontsize=14)
     plt.show()
 
 
 def plot_lr(lr):
     plt.figure(figsize=(10,6))
-    plt.plot(lr)
-    plt.ylabel('Learning rate')
-    plt.xlabel('Iterations')
-    plt.title('Learning rate through iterations')
+    plt.plot(lr_history)
+    plt.ylabel('Learning rate', fontsize=18)
+    plt.xlabel('Iterations', fontsize=18)
+    plt.title('Learning rate through iterations', fontsize=20)
+    plt.xticks(fontsize=14)
+    plt.yticks(fontsize=14)
     plt.show()
 
