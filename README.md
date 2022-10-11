@@ -19,7 +19,6 @@ Time of training (with validation phases) 4.0h 15.0m 25s.
 <img src= "utils/plot_lr.png">
 <br>
 <img src= "utils/plot_cm.png">
-<br>
 Confusion matrix was created from the predictions on the TEST set
 <br>
 <br>
