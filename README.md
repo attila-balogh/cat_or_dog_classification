@@ -22,7 +22,10 @@ Time of training (with validation phases) 4.0h 15.0m 25s.
 Confusion matrix was created from the predictions on the TEST set
 <br>
 <br>
+<br>
 
+### Training details:
+<br>
 
 Total parameters:   19,913,346<br>
 Total trainable parameters:   19,913,346<br>
