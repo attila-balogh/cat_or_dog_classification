@@ -65,6 +65,6 @@ class SmallCNN(nn.Module):
 
         t = torch.flatten(t, start_dim=1)
         t = self.dropout6(F.relu(self.fc1(t)))
-        t = F.relu(self.out(t))
+        t = F.softmax(self.out(t))
 
         return t
