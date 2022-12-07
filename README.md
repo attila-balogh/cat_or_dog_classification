@@ -1,7 +1,7 @@
 # Cat &amp; dog binary classification with PyTorch
 
-### Try it for Yourself!<br>
-https://catdog.up.railway.app/
+### Try it for Yourself!
+### https://catdog.up.railway.app/
 <br>
 <br>
 #### Accuracy on test set: 98.2667%
